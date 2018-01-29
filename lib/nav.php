@@ -23,12 +23,13 @@ add_action( 'genesis_header', 'genesis_do_nav' );
 add_filter( 'wp_nav_menu_args', 'bfg_nav_menu_args_filter' );
 function bfg_nav_menu_args_filter( $args ) {
 
-    require_once( BFG_THEME_MODULES . 'class-wp-bootstrap-navwalker.php' );
+    require_once( BFG_THEME_MODULES . 'wp-bootstrap-navwalker.php' ); // require_once( BFG_THEME_MODULES . 'class-wp-bootstrap-navwalker.php' );
 
     $navalign = get_theme_mod( 'navalign', false );
     
     if ( 'primary' === $args['theme_location'] ) {
         $args['container'] = false;
+        $args['depth'] = 2;
         $args['menu_class'] = 'navbar-nav mr-auto';
         $args['fallback_cb'] = 'WP_Bootstrap_Navwalker::fallback';
         $args['walker'] = new WP_Bootstrap_Navwalker();
@@ -88,7 +89,7 @@ function bfg_navbar_content_markup() {
         default:
             $output .= '<form class="form-inline float-lg-right" method="get" action="'.$url.'" role="search">';
             $output .= '<input class="form-control mr-sm-2" type="text" placeholder="Search" name="s">';
-            $output .= '<button class="btn btn-outline-success" type="submit">Search</button>';
+            // $output .= '<button class="btn btn-outline-success" type="submit">Search</button>';
             $output .= '</form>';
             break;
         case 'date': 
