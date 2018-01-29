@@ -31,16 +31,8 @@ function bfg_theme_scripts() {
 		wp_enqueue_script( 'app-popper-js' );
 
 		// Bootstrap JS
-		wp_register_script( 'app-bootstrap-js', BFG_THEME_JS . 'bootstrap.min.js', array( 'jquery' ), $version, true );
+		wp_register_script( 'app-bootstrap-js', BFG_THEME_JS . 'bootstrap-material-design.min.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'app-bootstrap-js' );
-
-		// Smart Menu JS
-		wp_register_script( 'app-smartmenu-js', BFG_THEME_JS . 'jquery.smartmenus.min.js', array( 'jquery' ), $version, true );
-		wp_enqueue_script( 'app-smartmenu-js' );
-
-		// Smart Menu Boostrap Addon Js
-		wp_register_script( 'app-smartmenu-bootstrap-js', BFG_THEME_JS . 'jquery.smartmenus.bootstrap-4.min.js', array( 'app-smartmenu-js' ), $version, true );
-		wp_enqueue_script( 'app-smartmenu-bootstrap-js' );
 
 		wp_register_script( 'app-js', BFG_THEME_JS . 'app.min.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'app-js' );
