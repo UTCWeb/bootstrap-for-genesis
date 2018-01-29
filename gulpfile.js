@@ -15,20 +15,19 @@ var gulp = require('gulp'),
     foreach = require('gulp-flatmap'),
     changed = require('gulp-changed'),
     runSequence = require('run-sequence'),
-    del = require('del');
+    del = require('del'),
+    tildeImporter = require('node-sass-tilde-importer');
 
 // CSS
 gulp.task('styles', function(){
-    var cssStream = gulp.src([
-        'node_modules/smartmenus/dist/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.css'
-    ])
-    .pipe(concat('smartmenus.css'));
-
     var sassStream = gulp.src('assets/scss/style.scss')
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['node_modules'],
+            importer: tildeImporter
+        }))// .sync().on('error', sass.logError))
         .pipe(concat('app.scss'))
     
-    var mergeStream = merge(sassStream, cssStream)
+    var mergeStream = merge(sassStream)
         .pipe(concat('app.css'))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(cmq())
@@ -53,10 +52,8 @@ gulp.task('scripts', function() {
     return gulp.src([
         'assets/js/source/*.js',
         'node_modules/jquery/dist/jquery.slim.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js',
-        'node_modules/popper.js/dist/umd/popper.js',
-        'node_modules/smartmenus/dist/jquery.smartmenus.js',
-        'node_modules/smartmenus/dist/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.js'
+        'node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.js',
+        'node_modules/popper.js/dist/umd/popper.js'
     ])
     .pipe(changed('js'))
     .pipe(foreach(function(stream, file){
