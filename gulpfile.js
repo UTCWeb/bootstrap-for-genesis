@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
     return gulp.src([
         'assets/js/source/*.js',
         'node_modules/jquery/dist/jquery.slim.js',
-        'node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.js',
+        'node_modules/daemonite-material/js/material.js',
         'node_modules/popper.js/dist/umd/popper.js'
     ])
     .pipe(changed('js'))
