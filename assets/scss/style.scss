@@ -2,7 +2,8 @@
 @import "supporting/variables-bootstrap-core-override";
 
 // Import Bootstrap Core
-@import "../../node_modules/bootstrap-material-design/scss/bootstrap-material-design"; // @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/daemonite-material/assets/scss/material.scss";
 
 // Import Fontawesome
 @import "../../node_modules/font-awesome/scss/font-awesome.scss";
@@ -20,7 +21,7 @@
 @import "supporting/skip-to-main-content";
 
 // Comments
-@import "supporting/comments";
+// @import "supporting/comments";
 
 // Images
 @import "supporting/wordpress-images";
@@ -29,12 +30,12 @@
 @import "supporting/table";
 
 // Widgets
-@import "supporting/widgets";
+// @import "supporting/widgets";
 
 // Pagination
 @import "supporting/pagination";
 
-@import "supporting/gallery";
+// @import "supporting/gallery";
 
 // Navigation
 @import "supporting/nav";
@@ -55,7 +56,7 @@
 @import "supporting/single";
 
 // Sidebar
-@import "supporting/sidebar";
+// @import "supporting/sidebar";
 
 // Footer Widgets
 @import "supporting/footer-widgets";
