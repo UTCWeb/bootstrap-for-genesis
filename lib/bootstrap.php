@@ -65,7 +65,7 @@ function bfg_merge_genesis_attr_classes() {
             'content'                   => 'col-sm-8',
             'sidebar-primary'           => 'col-sm-4',
             'sidebar-secondary'         => 'col-sm-2',
-            'archive-pagination'        => 'clearfix',
+            'archive-pagination'        => 'clearfix justify-content-center',
             'entry-content'             => 'clearfix',
             'entry-pagination'          => 'clearfix',
             'structural-wrap'           => 'container',
