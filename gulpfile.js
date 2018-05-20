@@ -71,8 +71,8 @@ gulp.task('scripts', function() {
 
 // Copy bootstrap fonts to assets folder
 gulp.task('copy', function() {
-    return gulp.src(['node_modules/font-awesome/fonts/**/**'], {
-        base: 'node_modules/font-awesome/fonts'
+    return gulp.src(['node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/**'], {
+        base: 'node_modules/@fortawesome/fontawesome-free-webfonts/webfonts'
     })
     .pipe(gulp.dest('assets/fonts/fontawesome'));
 });

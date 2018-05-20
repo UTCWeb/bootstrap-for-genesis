@@ -1,64 +1,17 @@
-// Bootstrap Core Variable Override
-@import "supporting/variables-bootstrap-core-override";
+// Variables
+@import "modules/variables";
 
 // Import Bootstrap Core
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Font Awesome
-@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
 
-// Bootstrap Genesis Theme Variables
-@import "supporting/variables-bootstrap-genesis";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-brands";
 
-// Screen Reader Classes
-@import "supporting/screen-reader-text";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
 
-// Long nonbreaking path name support
-@import "supporting/long-nonbreaking-path-name-support";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
 
-// Skip to Main Content - Accessibility Link
-@import "supporting/skip-to-main-content";
-
-// Comments
-@import "supporting/comments";
-
-// Images
-@import "supporting/wordpress-images";
-
-// Table
-@import "supporting/table";
-
-// Widgets
-@import "supporting/widgets";
-
-// Pagination
-@import "supporting/pagination";
-
-@import "supporting/gallery";
-
-// Navigation
-@import "supporting/nav";
-
-// Header
-@import "supporting/header";
-
-// Jumbotron
-@import "supporting/jumbotron";
-
-// Site Inner
-@import "supporting/site-inner";
-
-// Archive/Blog
-@import "supporting/archive";
-
-// Single Post/Page
-@import "supporting/single";
-
-// Sidebar
-@import "supporting/sidebar";
-
-// Footer Widgets
-@import "supporting/footer-widgets";
-
-// Site Footer
-@import "supporting/footer";
+// Accessibility
+@import "partials/accessibility";
