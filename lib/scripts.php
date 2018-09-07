@@ -18,6 +18,13 @@ function bfg_theme_scripts() {
 	if ( !is_admin() ) {
 		wp_enqueue_style( 'app-css', BFG_THEME_CSS . 'app.min.css' );
 
+		// Font Awesome 5 Free
+		wp_enqueue_style( 'app-fontawesome-css', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
+		wp_style_add_data( 'app-fontawesome-css', 'integrity', 'sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' );
+		wp_style_add_data( 'app-fontawesome-css', 'crossorigin', 'anonymous' );
+
+		wp_enqueue_style( 'app-fontawesome-shim-css', 'https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css' );
+
 		// Disable the superfish script
 		wp_deregister_script( 'superfish' );
 		wp_deregister_script( 'superfish-args' );
