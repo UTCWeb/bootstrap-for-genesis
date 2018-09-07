@@ -18,7 +18,9 @@ module.exports = {
 
 	// Style options.
 	styleSRC: './assets/scss/style.scss', // Path to main .scss file.
-	cssSRC: './node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4.css',
+	cssSRC: [
+		'./node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4.css'
+	],
 	styleDestination: './assets/css/', // Path to place the compiled CSS file. Default set to root folder.
 	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
@@ -54,7 +56,9 @@ module.exports = {
 		'./node_modules/jquery/dist/jquery.js',
         './node_modules/popper.js/dist/umd/popper.js',
         './node_modules/smartmenus/dist/jquery.smartmenus.js',
-        './node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4.js'
+		'./node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4.js',
+		'./node_modules/@fortawesome/fontawesome-free/js/all.js',
+		'./node_modules/@fortawesome/fontawesome-free/js/v4-shims.js'
 	], // Path to all vendor JS files.
 	customJSWatchFiles: './assets/js/source/*.js', // Path to all custom JS files.
 	projectPHPWatchFiles: './**/*.php', // Path to all PHP files.
