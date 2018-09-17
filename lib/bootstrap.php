@@ -12,7 +12,17 @@
 */
 
 // Add row class after wrap
-add_filter( 'genesis_structural_wrap-footer-widgets', 'bfg_filter_structural_wrap', 10, 2 );
+add_action( 'get_header', function() {
+    $wraps = array(
+        'footer-widgets'
+    );
+
+    foreach( $wraps as $wrap ) {
+        $context= "genesis_structural_wrap-$wrap";
+        add_filter( $context, 'bfg_filter_structural_wrap', 10, 2 );
+    }
+}, 10, 1 );
+
 function bfg_filter_structural_wrap( $output, $original_output ) {
     if( 'close' == $original_output ) {
         $output = '</div>' . $output;
