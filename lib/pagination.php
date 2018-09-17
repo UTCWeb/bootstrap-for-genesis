@@ -2,7 +2,7 @@
 /**
  * Pagination
  *
- * @package      B4Genesis
+ * @package      Bootstrap for Genesis
  * @since        1.0
  * @link         http://webdevsuperfast.github.io
  * @author       Rotsen Mark Acob <webdevsuperfast.github.io>
